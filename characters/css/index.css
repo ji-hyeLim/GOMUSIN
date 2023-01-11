@@ -1,0 +1,299 @@
+@font-face {
+  font-family: "GangwonEduSaeeum_OTFMediumA";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEduSaeeum_OTFMediumA.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "BMJUA";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/BMJUA.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+font {
+  font-family: "GangwonEduSaeeum_OTFMediumA", "BMJUA";
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font: 16px "GangwonEduSaeeum_OTFMediumA";
+  color: black;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: black;
+}
+
+h1 {
+  font-size: 38px;
+}
+
+h2 {
+  font-size: 18px;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+p {
+  font-size: 16px;
+}
+
+strong {
+  display: block;
+}
+
+header,
+nav,
+main,
+article,
+section,
+footer {
+  display: block;
+}
+
+@-webkit-keyframes logo-act {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes logo-act {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+.container {
+  position: relative;
+  text-align: right;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  background: url(../image/introduce_background.png) no-repeat;
+  background-size: cover;
+  background-position: center;
+  z-index: -10;
+  opacity: 0.8;
+}
+
+h1 img {
+  width: 200px;
+  margin-top: 50px;
+  margin-right: 50px;
+  -webkit-animation: logo-act 2s linear infinite;
+          animation: logo-act 2s linear infinite;
+}
+
+.menu {
+  position: absolute;
+  top: 0;
+  left: 50px;
+}
+.menu .menu-box {
+  position: relative;
+  margin-top: 50px;
+}
+.menu .menu-box:hover img {
+  transform: scale(1.1);
+  transition: 0.2s;
+}
+.menu .menu-box:hover p {
+  color: lightseagreen;
+}
+.menu .menu-box img {
+  width: 150px;
+}
+.menu .menu-box p {
+  font-size: 2.5em;
+  font-family: "BMJUA";
+}
+
+.title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  top: 80px;
+  padding: 20px 30px;
+  color: white;
+  border-radius: 20px 20px 0 0;
+  background-color: black;
+  font-size: 2.5em;
+  font-weight: 300;
+  font-family: "BMJUA";
+}
+
+.content {
+  justify-content: center;
+  margin-top: 0px;
+}
+.content .introduce {
+  position: relative;
+  width: 800px;
+  height: 400px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  border: 10px solid black;
+  border-radius: 20px;
+  background-color: white;
+}
+.content .introduce .character_box:not(.one) {
+  display: none;
+}
+.content .introduce .character {
+  width: 700px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.content .introduce .flex-box {
+  display: flex;
+}
+.content .introduce .flex-box img {
+  display: inline-block;
+}
+.content .introduce .flex-box .text-box {
+  position: relative;
+}
+.content .introduce .flex-box .intro-text {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 450px;
+  margin-left: 70px;
+  text-align: left;
+}
+.content .introduce .flex-box .intro-text strong {
+  margin-bottom: 20px;
+  font-size: 60px;
+}
+.content .introduce .flex-box .intro-text p {
+  font-size: 30px;
+}
+.content .list {
+  display: flex;
+  justify-content: center;
+}
+.content .list .list-box {
+  position: relative;
+  width: 530px;
+  height: 340px;
+  margin-right: 50px;
+  border: 10px solid black;
+  border-radius: 20px;
+  background-color: white;
+}
+.content .list .list-box:nth-child(2) {
+  width: 400px;
+}
+.content .list .list-box:nth-child(3) {
+  width: 230px;
+}
+.content .list .list-box h2 {
+  text-align: left;
+  margin: 12px;
+  font-size: 2rem;
+  font-weight: 300;
+  font-family: "BMJUA";
+}
+.content .list .list-box ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.content .list .list-box ul li {
+  height: 10%;
+  margin: 10px;
+}
+.content .list .list-box ul li a {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: black;
+}
+.content .list .list-box ul li a:hover {
+  transform: scale(1.05);
+  transition: 0.2s;
+  background-color: lightseagreen;
+}
+.content .list .list-box ul li a img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  padding: 15px;
+}
+.content .list .list-box .friend li {
+  height: 10%;
+  margin: 10px;
+}
+.content .list .list-box .friend li a {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: black;
+}
+.content .list .list-box .friend li a img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 150px;
+  padding: 15px;
+}/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,139 @@
+@import './style.scss';
+@import './reset.scss';
+@import './mixin.scss';
+
+@keyframes logo-act {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(5deg); }
+    50% { transform: rotate(0deg); }
+    75% { transform: rotate(-5deg); }
+    100% { transform: rotate(0deg); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 0.5; }
+}
+
+@keyframes bannermove {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(-50%, 0);
+    }
+}
+
+.container {
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    background: url(../image/gallery_background.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+h1 {
+    text-align: right;
+    img {
+        width: 200px;
+        margin-top: 50px;
+        margin-right: 50px;
+
+        animation: logo-act 2s linear infinite;
+    }
+}
+
+
+.menu {
+    position: absolute;
+    top: 0; left: 50px;
+
+    .menu-box {
+        position: relative;
+        margin-top: 50px;
+
+        &:hover {
+            img {
+                transform: scale(1.1);
+                transition: 0.2s;
+            }
+
+            p {
+                color: lightseagreen;
+            }
+        }
+        
+        img {
+            width: 150px;
+        }
+        
+        p {
+            font: {
+                size: 2.5em;
+                family: "BMJUA";
+            }
+        }
+    }
+}
+
+.gallery {
+    position: absolute;
+    top: 13vh;
+    @include pos-center-x();
+
+    .bigImg {
+        width: 800px;
+        height: 500px;
+        border: 20px solid black;
+
+        animation: fadeIn 1s;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .del-btn {
+            margin-top: 25px;
+            margin-right: 25px;
+            img {
+                width: 40px;
+            }
+        }
+    }
+} // gallery
+
+.photozone {
+    position: absolute;
+    bottom: 50px;
+    width: 100%;
+    height: 160px;
+    overflow: hidden;
+    background-color: black;
+
+    .flex-box {
+        display: flex;
+        flex-wrap:nowrap;
+        width: 2600px;
+        height: 100%;
+        margin-top: 20px;
+        animation: bannermove 20s linear infinite;
+    }
+
+    .small {
+        cursor: pointer;
+        &:hover {
+            transform: scale(1.1);
+            transition: 0.3s ease-in;
+        }
+    }
+    
+    img {
+        width: 200px;
+        height: 120px;
+        margin: 0 10px ;
+    }
+}

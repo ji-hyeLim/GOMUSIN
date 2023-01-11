@@ -1,0 +1,169 @@
+@font-face {
+  font-family: "GangwonEduSaeeum_OTFMediumA";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEduSaeeum_OTFMediumA.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "BMJUA";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/BMJUA.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+font {
+  font-family: "GangwonEduSaeeum_OTFMediumA", "BMJUA";
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  color: black;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: black;
+}
+
+strong {
+  display: block;
+}
+
+header,
+nav,
+main,
+article,
+section,
+footer {
+  display: block;
+}
+
+@-webkit-keyframes logo-act {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes logo-act {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+.container {
+  position: relative;
+  text-align: center;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background: url(../image/main_background.png) no-repeat;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  opacity: 0.8;
+}
+
+h1 img {
+  width: 300px;
+  margin-top: 50px;
+  text-align: center;
+  -webkit-animation: logo-act 2s linear infinite;
+          animation: logo-act 2s linear infinite;
+}
+
+.menu-box {
+  display: flex;
+}
+.menu-box .menu {
+  position: relative;
+  width: 50%;
+  margin-top: 150px;
+}
+.menu-box .menu a:hover {
+  transform: translateY(-10px);
+  transition: 0.2s;
+}
+.menu-box .menu a:hover p {
+  color: lightseagreen;
+}
+.menu-box .menu img {
+  width: 15vw;
+}
+.menu-box .menu p {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 3em;
+  font-family: "BMJUA";
+}
+
+.episode {
+  margin-top: 100px;
+  margin-left: 80px;
+  padding-bottom: 30px;
+}
+.episode .episode-box {
+  position: relative;
+  width: 250px;
+}
+.episode .episode-box a:hover {
+  transform: translateY(-10px);
+  transition: 0.2s;
+}
+.episode .episode-box a:hover p {
+  color: lightseagreen;
+}
+.episode .episode-box p {
+  position: absolute;
+  top: 75px;
+  left: 46px;
+  line-height: 40px;
+  font-size: 35px;
+  font-family: "BMJUA";
+}/*# sourceMappingURL=index.css.map */

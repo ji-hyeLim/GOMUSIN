@@ -1,0 +1,241 @@
+@font-face {
+  font-family: "GangwonEduSaeeum_OTFMediumA";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEduSaeeum_OTFMediumA.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "BMJUA";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/BMJUA.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+font {
+  font-family: "GangwonEduSaeeum_OTFMediumA", "BMJUA";
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font: 16px "GangwonEduSaeeum_OTFMediumA";
+  color: black;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: black;
+}
+
+h1 {
+  font-size: 38px;
+}
+
+h2 {
+  font-size: 18px;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+p {
+  font-size: 16px;
+}
+
+strong {
+  display: block;
+}
+
+header,
+nav,
+main,
+article,
+section,
+footer {
+  display: block;
+}
+
+@-webkit-keyframes logo-act {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes logo-act {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.5;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.5;
+  }
+}
+@-webkit-keyframes bannermove {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-50%, 0);
+  }
+}
+@keyframes bannermove {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-50%, 0);
+  }
+}
+.container {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  background: url(../image/gallery_background.png) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+h1 {
+  text-align: right;
+}
+h1 img {
+  width: 200px;
+  margin-top: 50px;
+  margin-right: 50px;
+  -webkit-animation: logo-act 2s linear infinite;
+          animation: logo-act 2s linear infinite;
+}
+
+.menu {
+  position: absolute;
+  top: 0;
+  left: 50px;
+}
+.menu .menu-box {
+  position: relative;
+  margin-top: 50px;
+}
+.menu .menu-box:hover img {
+  transform: scale(1.1);
+  transition: 0.2s;
+}
+.menu .menu-box:hover p {
+  color: lightseagreen;
+}
+.menu .menu-box img {
+  width: 150px;
+}
+.menu .menu-box p {
+  font-size: 2.5em;
+  font-family: "BMJUA";
+}
+
+.gallery {
+  position: absolute;
+  top: 13vh;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.gallery .bigImg {
+  width: 800px;
+  height: 500px;
+  border: 20px solid black;
+  -webkit-animation: fadeIn 1s;
+          animation: fadeIn 1s;
+}
+.gallery .bigImg img {
+  width: 100%;
+  height: 100%;
+}
+.gallery .bigImg .del-btn {
+  margin-top: 25px;
+  margin-right: 25px;
+}
+.gallery .bigImg .del-btn img {
+  width: 40px;
+}
+
+.photozone {
+  position: absolute;
+  bottom: 50px;
+  width: 100%;
+  height: 160px;
+  overflow: hidden;
+  background-color: black;
+}
+.photozone .flex-box {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 2600px;
+  height: 100%;
+  margin-top: 20px;
+  -webkit-animation: bannermove 20s linear infinite;
+          animation: bannermove 20s linear infinite;
+}
+.photozone .small {
+  cursor: pointer;
+}
+.photozone .small:hover {
+  transform: scale(1.1);
+  transition: 0.3s ease-in;
+}
+.photozone img {
+  width: 200px;
+  height: 120px;
+  margin: 0 10px;
+}/*# sourceMappingURL=index.css.map */

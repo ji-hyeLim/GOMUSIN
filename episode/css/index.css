@@ -1,0 +1,233 @@
+@font-face {
+  font-family: "GangwonEduSaeeum_OTFMediumA";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEduSaeeum_OTFMediumA.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "BMJUA";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/BMJUA.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+font {
+  font-family: "GangwonEduSaeeum_OTFMediumA", "BMJUA";
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font: 18px "GangwonEduSaeeum_OTFMediumA";
+  color: black;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: black;
+}
+
+strong {
+  display: block;
+}
+
+header,
+nav,
+main,
+article,
+section,
+footer {
+  display: block;
+}
+
+@-webkit-keyframes logo-act {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes logo-act {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+.container {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  background: url(../image/episode_background.png) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+h1 {
+  text-align: right;
+}
+h1 img {
+  width: 200px;
+  margin-top: 50px;
+  margin-right: 50px;
+  -webkit-animation: logo-act 2s linear infinite;
+          animation: logo-act 2s linear infinite;
+}
+
+.menu {
+  position: absolute;
+  top: 0;
+  left: 50px;
+}
+.menu .menu-box {
+  position: relative;
+  margin-top: 50px;
+}
+.menu .menu-box:hover img {
+  transform: scale(1.1);
+  transition: 0.2s;
+}
+.menu .menu-box:hover p {
+  color: lightseagreen;
+}
+.menu .menu-box img {
+  width: 150px;
+}
+.menu .menu-box p {
+  font-size: 2.5em;
+  font-family: "BMJUA";
+}
+
+.episode_all {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+}
+.episode_all .video_btn .is_on {
+  font-weight: 600;
+}
+.episode_all .video_btn .is_on a {
+  font-size: 32px;
+  color: white;
+}
+.episode_all .video_btn li {
+  position: relative;
+  cursor: pointer;
+  width: 100px;
+  height: 180px;
+  margin-bottom: 5px;
+  border-radius: 30px 0 0 30px;
+  background-color: black;
+}
+.episode_all .video_btn li:hover {
+  transform: scaleX(1.1);
+  transition: 0.2s;
+}
+.episode_all .video_btn li:hover a {
+  color: lightseagreen;
+}
+.episode_all .video_btn li a {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: gray;
+  width: 100%;
+  font-size: 30px;
+  font-family: "BMJUA";
+}
+.episode_all .video_list {
+  position: relative;
+  width: 970px;
+  height: 600px;
+  border: 15px solid black;
+  border-radius: 0 20px 20px 20px;
+  text-align: left;
+  background-color: black;
+  overflow-y: scroll;
+}
+.episode_all .video_list .box:nth-child(2), .episode_all .video_list .box:nth-child(3) {
+  display: none;
+}
+.episode_all .video_list .video_link {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  z-index: 1000;
+}
+.episode_all .video_list .video_link .video {
+  width: 200px;
+  margin: 15px;
+}
+.episode_all .video_list .video_link .video:hover {
+  transform: scale(1.05);
+  transition: all 0.3s;
+  background: rgba(0, 0, 0, 0.8);
+}
+.episode_all .video_list .video_link .video:hover a::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+  background: url(../image/play.png) no-repeat;
+  background-size: 20%;
+  background-position: center;
+  background-color: black;
+  opacity: 0.5;
+}
+.episode_all .video_list .video_link .video a img {
+  width: 200px;
+  height: 130px;
+}
+.episode_all .video_list .video_link .video p {
+  text-align: center;
+  color: white;
+}
+.episode_all .video_list::-webkit-scrollbar {
+  width: 5px;
+}
+.episode_all .video_list::-webkit-scrollbar-thumb {
+  height: 20%;
+  background: #ffffff;
+  border-radius: 50px;
+}/*# sourceMappingURL=index.css.map */

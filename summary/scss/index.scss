@@ -1,0 +1,218 @@
+@import './style.scss';
+@import './reset.scss';
+@import './mixin.scss';
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 0.5; }
+}
+
+@keyframes text-up {
+    from { transform: translateY(150%); }
+    to { transform: translateY(100%); }
+}
+
+@keyframes logo-act {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(5deg); }
+    50% { transform: rotate(0deg); }
+    75% { transform: rotate(-5deg); }
+    100% { transform: rotate(0deg); }
+}
+
+@keyframes opening-act {
+    0% { transform: translateX(-10px); }
+    50% { 
+        transform: translateX(0px); 
+        transform: scaleX(-1);
+    }
+    100% { transform: translateX(10px);  }
+}
+
+.container {
+    position: relative;
+    text-align: right;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background: url(../image/summary_background.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+h1 {
+    text-align: right;
+    img {
+        width: 200px;
+        margin-top: 50px;
+        margin-right: 50px;
+
+        animation: logo-act 2s linear infinite;
+    }
+}
+
+
+.menu {
+    position: absolute;
+    top: 0; left: 50px;
+
+    .menu-box {
+        position: relative;
+        margin-top: 50px;
+
+        &:hover {
+            img {
+                transform: scale(1.1);
+                transition: 0.2s;
+            }
+
+            p {
+                color: lightseagreen;
+            }
+        }
+
+        img {
+            width: 150px;
+        }
+    
+        p {
+            font: {
+                size: 2.5em;
+                family: "BMJUA";
+            }
+        }
+    }
+
+}
+
+.text-box {
+    position: relative;
+    
+    p {
+        position: absolute;
+        top: 0; right: 350px;
+        transform: translateY(100%);
+        text-align: center;
+        z-index: 10;
+        font: {
+            size: 40px;
+        }
+
+        animation: text-up 2s;
+    }
+}
+
+.text-box::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 260px;
+    width: 650px;
+    height: 600px;
+    border-radius: 50%;
+    text-align: center;
+    background-color: white;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+    opacity: 0.5;
+
+    animation: fadeIn 3s;
+}
+
+.opening {
+    cursor: pointer;
+    position: relative;
+    width: 300px;
+    margin-top: 500px;
+    margin-left: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+
+    &:hover {
+
+        img {
+            animation-play-state:paused;
+            transform: scale(1.5);
+            transition: 0.2s;
+        }
+
+        p {
+            color: black;
+        }
+    }
+    
+    img {
+        width: 300px;
+        filter: drop-shadow(0px 0px 10px #fff);
+
+        animation: opening-act 2s step-start infinite;
+    }
+
+    p {
+        color: #fff;
+        font: {
+            size: 2em;
+            family: "BMJUA";
+        } 
+    }
+}
+
+#modal {
+    display: none;
+    width: 40vw; 
+    height: 55vh;
+    z-index: 10;
+    border-radius: 10px;
+    border: 1px solid gray;
+    position: fixed;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    
+
+    transition: all 1s;
+    background-color: #fff;
+}
+
+.modal_header {
+    position: relative;
+    width: 100%;
+    height: 10%;
+    border-bottom: 1px solid gray;
+    font: {
+        family:"BMJUA";
+    }
+    
+
+    .del-btn {
+        cursor: pointer;
+
+        img {
+            @include pos-center-y() {
+                position: absolute;
+                right: 20px;
+            };
+                width: 25px;
+                height: 25px;
+        }
+    } // del-btn
+} // modal_header
+
+.txt {
+    @include pos-center-y();
+    font-size: 20px;
+    left: 20px; 
+}
+
+.video-wrap {
+    position: relative;
+    width: 100%; 
+    height: 90%;
+
+    iframe {
+        margin-top: 3.5vh;
+    }
+}

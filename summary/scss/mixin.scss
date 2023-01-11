@@ -1,0 +1,33 @@
+@mixin pos-center-x($type: absolute) { // 수평 가운데 정렬
+    @if($type == fixed or $type == absolute ){
+        position: $type;
+        left: 50%;
+        transform: translateX(-50%);
+        @content;
+    }
+}
+
+@mixin pos-center-y($type: absolute) { // 수직 가운데 정렬
+    @if($type == fixed or $type == absolute ){
+        position: $type;
+        top: 50%;
+        transform: translateY(-50%);
+        @content;
+    }
+}
+
+@mixin pos-center($type: absolute) { // 수직수평 가운데 정렬
+    @if($type == fixed or $type == absolute) {
+        position: $type;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        @content;
+    }
+}
+
+@mixin flex-box($jc: space-between) { // flex 박스 설정
+    display: flex;
+    justify-content: $jc;
+    @content;
+}

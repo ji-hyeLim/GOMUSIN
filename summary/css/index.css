@@ -1,0 +1,326 @@
+@font-face {
+  font-family: "GangwonEduSaeeum_OTFMediumA";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEduSaeeum_OTFMediumA.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "BMJUA";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/BMJUA.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+font {
+  font-family: "GangwonEduSaeeum_OTFMediumA", "BMJUA";
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font: 16px "GangwonEduSaeeum_OTFMediumA";
+  color: black;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: black;
+}
+
+h1 {
+  font-size: 38px;
+}
+
+h2 {
+  font-size: 18px;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+p {
+  font-size: 16px;
+}
+
+strong {
+  display: block;
+}
+
+header,
+nav,
+main,
+article,
+section,
+footer {
+  display: block;
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.5;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.5;
+  }
+}
+@-webkit-keyframes text-up {
+  from {
+    transform: translateY(150%);
+  }
+  to {
+    transform: translateY(100%);
+  }
+}
+@keyframes text-up {
+  from {
+    transform: translateY(150%);
+  }
+  to {
+    transform: translateY(100%);
+  }
+}
+@-webkit-keyframes logo-act {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes logo-act {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@-webkit-keyframes opening-act {
+  0% {
+    transform: translateX(-10px);
+  }
+  50% {
+    transform: translateX(0px);
+    transform: scaleX(-1);
+  }
+  100% {
+    transform: translateX(10px);
+  }
+}
+@keyframes opening-act {
+  0% {
+    transform: translateX(-10px);
+  }
+  50% {
+    transform: translateX(0px);
+    transform: scaleX(-1);
+  }
+  100% {
+    transform: translateX(10px);
+  }
+}
+.container {
+  position: relative;
+  text-align: right;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background: url(../image/summary_background.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+h1 {
+  text-align: right;
+}
+h1 img {
+  width: 200px;
+  margin-top: 50px;
+  margin-right: 50px;
+  -webkit-animation: logo-act 2s linear infinite;
+          animation: logo-act 2s linear infinite;
+}
+
+.menu {
+  position: absolute;
+  top: 0;
+  left: 50px;
+}
+.menu .menu-box {
+  position: relative;
+  margin-top: 50px;
+}
+.menu .menu-box:hover img {
+  transform: scale(1.1);
+  transition: 0.2s;
+}
+.menu .menu-box:hover p {
+  color: lightseagreen;
+}
+.menu .menu-box img {
+  width: 150px;
+}
+.menu .menu-box p {
+  font-size: 2.5em;
+  font-family: "BMJUA";
+}
+
+.text-box {
+  position: relative;
+}
+.text-box p {
+  position: absolute;
+  top: 0;
+  right: 350px;
+  transform: translateY(100%);
+  text-align: center;
+  z-index: 10;
+  font-size: 40px;
+  -webkit-animation: text-up 2s;
+          animation: text-up 2s;
+}
+
+.text-box::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 260px;
+  width: 650px;
+  height: 600px;
+  border-radius: 50%;
+  text-align: center;
+  background-color: white;
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+  opacity: 0.5;
+  -webkit-animation: fadeIn 3s;
+          animation: fadeIn 3s;
+}
+
+.opening {
+  cursor: pointer;
+  position: relative;
+  width: 300px;
+  margin-top: 500px;
+  margin-left: 50px;
+  padding-bottom: 50px;
+  text-align: center;
+}
+.opening:hover img {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  transform: scale(1.5);
+  transition: 0.2s;
+}
+.opening:hover p {
+  color: black;
+}
+.opening img {
+  width: 300px;
+  filter: drop-shadow(0px 0px 10px #fff);
+  -webkit-animation: opening-act 2s step-start infinite;
+          animation: opening-act 2s step-start infinite;
+}
+.opening p {
+  color: #fff;
+  font-size: 2em;
+  font-family: "BMJUA";
+}
+
+#modal {
+  display: none;
+  width: 40vw;
+  height: 55vh;
+  z-index: 10;
+  border-radius: 10px;
+  border: 1px solid gray;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 1s;
+  background-color: #fff;
+}
+
+.modal_header {
+  position: relative;
+  width: 100%;
+  height: 10%;
+  border-bottom: 1px solid gray;
+  font-family: "BMJUA";
+}
+.modal_header .del-btn {
+  cursor: pointer;
+}
+.modal_header .del-btn img {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  position: absolute;
+  right: 20px;
+  width: 25px;
+  height: 25px;
+}
+
+.txt {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  left: 20px;
+}
+
+.video-wrap {
+  position: relative;
+  width: 100%;
+  height: 90%;
+}
+.video-wrap iframe {
+  margin-top: 3.5vh;
+}/*# sourceMappingURL=index.css.map */
