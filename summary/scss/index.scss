@@ -85,8 +85,7 @@ h1 {
             }
         }
     }
-
-}
+} // menu
 
 .text-box {
     position: relative;
@@ -103,7 +102,7 @@ h1 {
 
         animation: text-up 2s;
     }
-}
+} // text-box
 
 .text-box::after {
     content: "";
@@ -121,7 +120,7 @@ h1 {
     opacity: 0.5;
 
     animation: fadeIn 3s;
-}
+} // text-box::after
 
 .opening {
     cursor: pointer;
@@ -159,7 +158,7 @@ h1 {
             family: "BMJUA";
         } 
     }
-}
+} // opening
 
 #modal {
     display: none;
