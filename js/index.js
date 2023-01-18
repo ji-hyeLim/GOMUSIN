@@ -31,7 +31,6 @@ window.onload = function() {
         });
     }
 
-
     //======== character ========//
     
     // tab
