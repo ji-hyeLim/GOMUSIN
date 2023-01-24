@@ -1,13 +1,15 @@
-# GOMUSIN
+# :tv: GOMUSIN
 
 - 추억의 만화 '검정고무신'의 캐릭터 소개 페이지를 새롭게 제작해보았습니다.
 ---
-- **사용 소스**: HTML, SASS, JavaScript
-- **작업 인원**: 1명
-- **제작 기간**: 10일
+:seedling: **사용 소스**: HTML, SASS, JavaScript
+<br>
+:seedling: **작업 인원**: 1명
+<br>
+:seedling: **제작 기간**: 10일
 
 ---
-## 페이지
+## :film_strip: 페이지
 ![메인페이지](./page/main.png)
 > 메인페이지
 
