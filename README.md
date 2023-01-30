@@ -31,3 +31,7 @@
 
 ![에피소드 다시보기](./page/episode.png)
 > 에피소드 다시보기
+<br>
+
+## :link: Link
+https://limjh0927.cafe24.com/profile/works/javascript/gomusin/index.html
