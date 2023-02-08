@@ -181,9 +181,9 @@ h1 img {
   content: "";
   position: absolute;
   top: 0;
-  right: 260px;
-  width: 650px;
-  height: 600px;
+  right: 280px;
+  width: 600px;
+  height: 550px;
   border-radius: 50%;
   text-align: center;
   background-color: white;
@@ -224,8 +224,8 @@ h1 img {
 
 #modal {
   display: none;
-  width: 40vw;
-  height: 55vh;
+  width: 800px;
+  height: 550px;
   z-index: 10;
   border-radius: 10px;
   border: 1px solid gray;
