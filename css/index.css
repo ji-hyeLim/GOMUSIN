@@ -50,24 +50,6 @@ footer {
   display: block;
 }
 
-@-webkit-keyframes logo-act {
-  0% {
-    transform: rotate(0deg);
-  }
-  25% {
-    transform: rotate(5deg);
-  }
-  50% {
-    transform: rotate(0deg);
-  }
-  75% {
-    transform: rotate(-5deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
-}
-
 @keyframes logo-act {
   0% {
     transform: rotate(0deg);
@@ -98,7 +80,7 @@ footer {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   text-align: center;
   background: url(../image/main_background.png) no-repeat;
   background-size: cover;
@@ -111,8 +93,7 @@ h1 img {
   width: 300px;
   margin-top: 50px;
   text-align: center;
-  -webkit-animation: logo-act 2s linear infinite;
-          animation: logo-act 2s linear infinite;
+  animation: logo-act 2s linear infinite;
 }
 
 .menu-box {

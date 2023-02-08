@@ -71,15 +71,6 @@ footer {
   display: block;
 }
 
-@-webkit-keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 0.5;
-  }
-}
-
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -88,37 +79,12 @@ footer {
     opacity: 0.5;
   }
 }
-@-webkit-keyframes text-up {
-  from {
-    transform: translateY(150%);
-  }
-  to {
-    transform: translateY(100%);
-  }
-}
 @keyframes text-up {
   from {
     transform: translateY(150%);
   }
   to {
     transform: translateY(100%);
-  }
-}
-@-webkit-keyframes logo-act {
-  0% {
-    transform: rotate(0deg);
-  }
-  25% {
-    transform: rotate(5deg);
-  }
-  50% {
-    transform: rotate(0deg);
-  }
-  75% {
-    transform: rotate(-5deg);
-  }
-  100% {
-    transform: rotate(0deg);
   }
 }
 @keyframes logo-act {
@@ -136,18 +102,6 @@ footer {
   }
   100% {
     transform: rotate(0deg);
-  }
-}
-@-webkit-keyframes opening-act {
-  0% {
-    transform: translateX(-10px);
-  }
-  50% {
-    transform: translateX(0px);
-    transform: scaleX(-1);
-  }
-  100% {
-    transform: translateX(10px);
   }
 }
 @keyframes opening-act {
@@ -182,8 +136,7 @@ h1 img {
   width: 200px;
   margin-top: 50px;
   margin-right: 50px;
-  -webkit-animation: logo-act 2s linear infinite;
-          animation: logo-act 2s linear infinite;
+  animation: logo-act 2s linear infinite;
 }
 
 .menu {
@@ -221,8 +174,7 @@ h1 img {
   text-align: center;
   z-index: 10;
   font-size: 40px;
-  -webkit-animation: text-up 2s;
-          animation: text-up 2s;
+  animation: text-up 2s;
 }
 
 .text-box::after {
@@ -239,8 +191,7 @@ h1 img {
   background-position: center;
   z-index: 1;
   opacity: 0.5;
-  -webkit-animation: fadeIn 3s;
-          animation: fadeIn 3s;
+  animation: fadeIn 3s;
 }
 
 .opening {
@@ -253,8 +204,7 @@ h1 img {
   text-align: center;
 }
 .opening:hover img {
-  -webkit-animation-play-state: paused;
-          animation-play-state: paused;
+  animation-play-state: paused;
   transform: scale(1.5);
   transition: 0.2s;
 }
@@ -264,8 +214,7 @@ h1 img {
 .opening img {
   width: 300px;
   filter: drop-shadow(0px 0px 10px #fff);
-  -webkit-animation: opening-act 2s step-start infinite;
-          animation: opening-act 2s step-start infinite;
+  animation: opening-act 2s step-start infinite;
 }
 .opening p {
   color: #fff;

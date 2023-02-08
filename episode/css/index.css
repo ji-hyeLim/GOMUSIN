@@ -51,24 +51,6 @@ footer {
   display: block;
 }
 
-@-webkit-keyframes logo-act {
-  0% {
-    transform: rotate(0deg);
-  }
-  25% {
-    transform: rotate(5deg);
-  }
-  50% {
-    transform: rotate(0deg);
-  }
-  75% {
-    transform: rotate(-5deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
-}
-
 @keyframes logo-act {
   0% {
     transform: rotate(0deg);
@@ -104,8 +86,7 @@ h1 img {
   width: 200px;
   margin-top: 50px;
   margin-right: 50px;
-  -webkit-animation: logo-act 2s linear infinite;
-          animation: logo-act 2s linear infinite;
+  animation: logo-act 2s linear infinite;
 }
 
 .menu {
